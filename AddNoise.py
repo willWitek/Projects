@@ -3,7 +3,6 @@ import numpy as np
 from scipy.fft import fft2, ifft2
 from PIL import Image
 import os
-from scipy.ndimage.filters import gaussian_filter
 
 maindir = '/Users/williamwitek/Documents/Fordham/JuniorYear/LeedsLab/imagenette_reconstructed/imagenette2/'
 cats = os.listdir(maindir)
@@ -37,8 +36,7 @@ testImg = Image.open(maindir + 'n03417042_118.JPEG')
 testImg = np.array(testImg)
 dim = (1000,1000)
 
-for i in range(1):
-    generatenoise(testImg, dim)
+generatenoise(testImg, dim) # TEST
 
 
 # %%
