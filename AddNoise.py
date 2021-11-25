@@ -4,7 +4,7 @@ from scipy.fft import fft2, ifft2
 from PIL import Image
 import os
 
-maindir = '/Users/williamwitek/Documents/Fordham/JuniorYear/LeedsLab/imagenette_reconstructed/imagenette2/'
+maindir = '../imagenette2/'
 cats = os.listdir(maindir)
 
 def generatenoise(img,dim):
@@ -30,13 +30,10 @@ def generatenoise(img,dim):
     return absfImg
     
    
-   
+## Testing Code ## 
 testImg = Image.open(maindir + 'n03417042_118.JPEG')
 #testImg.show()
 testImg = np.array(testImg)
 dim = (1000,1000)
 
 generatenoise(testImg, dim) # TEST
-
-
-# %%
